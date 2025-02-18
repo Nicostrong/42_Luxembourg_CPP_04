@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:36 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:52:18 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/18 13:30:47 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ void	Character::equip( AMateria *m )
 		}
 	}
 	std::cout << this->_name << "'s inventory is full." << std::endl;
+	delete m;
 	return ;
 }
 

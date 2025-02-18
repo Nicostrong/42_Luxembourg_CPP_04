@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:07:24 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:52:40 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/18 13:33:24 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int main( void )
 	newPlayer.use(0, bob); // Ice doit fonctionner
 
 	separator("TEST: Destruction des objets");
-	
+	delete m2;	//	unequiped but not free (main.cpp:66)
+
 	return (0);
 }
