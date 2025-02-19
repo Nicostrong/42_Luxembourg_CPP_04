@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 14:39:12 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:30:59 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 09:45:24 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "Ground.hpp"
 
 class	AMateria;
 
@@ -31,6 +32,8 @@ class	ICharacter
 		virtual void				equip( AMateria *m ) = 0;
 		virtual void				unequip( int idx ) = 0;
 		virtual void				use( int idx, ICharacter &target ) = 0;
+		virtual	void				dropMateria( int idx ) = 0;
+		virtual void				pickupMateria( void ) = 0;
 
 };
 

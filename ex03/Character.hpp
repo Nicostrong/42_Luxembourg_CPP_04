@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 16:16:41 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 09:41:22 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ class	Character : public	ICharacter
 		void				equip( AMateria *m);
 		void				unequip( int idx );
 		void				use( int idx, ICharacter &target );
+		void				dropMateria( int idx );
+		void				pickupMateria( void );
 };
 
 

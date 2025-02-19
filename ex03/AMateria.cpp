@@ -6,12 +6,11 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:07:38 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:33:13 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 12:39:22 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
 
 /*
  *	Default constructor
@@ -27,7 +26,7 @@ AMateria::AMateria( void ) : _type("default")
  */
 AMateria::AMateria( std::string const &type ) : _type(type)
 {
-	std::cout << "Constructor AMAteria with parameter type called." << std::endl;
+	std::cout << "Constructor AMateria with parameter type called." << std::endl;
 	return ;
 }
 

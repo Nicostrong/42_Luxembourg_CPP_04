@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/17 10:06:44 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/18 13:26:29 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/19 09:46:25 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,8 @@ SRC				=	main.cpp \
 					Cure.cpp \
 					Ice.cpp \
 					MateriaSource.cpp \
-					AMateria.cpp
+					AMateria.cpp \
+					Ground.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 
