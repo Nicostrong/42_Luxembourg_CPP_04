@@ -6,17 +6,17 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:55 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:51:26 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:05:14 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class	Cat : public virtual A_Animal
+class	Cat : public virtual AAnimal
 {
 	private:
 

@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:54:57 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:05:48 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
  *	Default Constructor of class Cat
  */
-Cat::Cat( void ) : A_Animal("Cat")
+Cat::Cat( void ) : AAnimal("Cat")
 {
 	std::cout << "Default constructor Cat called" << std::endl;
 	_brain = new Brain();
@@ -25,7 +25,7 @@ Cat::Cat( void ) : A_Animal("Cat")
 /*
  *	Constructor of class Cat with type parameter
  */
-Cat::Cat( const std::string type ) : A_Animal(type)
+Cat::Cat( const std::string type ) : AAnimal(type)
 {
 	std::cout << "Constructor Cat called with parameter type" << std::endl;
 	_brain = new Brain();
@@ -35,7 +35,7 @@ Cat::Cat( const std::string type ) : A_Animal(type)
 /*
  *	Copy constructor of class Cat, copy the value of src to the current object
  */
-Cat::Cat( const Cat &src_object ) : A_Animal(src_object)
+Cat::Cat( const Cat &src_object ) : AAnimal(src_object)
 {
 	std::cout << "Copy constructor Cat called" << std::endl;
 	_brain = new Brain(*src_object._brain);
@@ -60,7 +60,7 @@ Cat	&Cat::operator=( const Cat &src_object )
 	std::cout << "Assignation operator overload Cat called" << std::endl;
 	if (this != &src_object)
 	{
-		A_Animal::operator=(src_object);
+		AAnimal::operator=(src_object);
 		delete _brain;
 		_brain = new Brain(*src_object._brain);
 	}

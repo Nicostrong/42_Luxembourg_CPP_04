@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:38:49 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:55:53 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:06:49 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
  *	Default Constructor of class WongCat
  */
-WongCat::WongCat( void ) :	A_Animal("WongCat"), \
+WongCat::WongCat( void ) :	AAnimal("WongCat"), \
 							Cat("WongCat"), \
 							WongAnimal("WongCat")
 {
@@ -26,7 +26,7 @@ WongCat::WongCat( void ) :	A_Animal("WongCat"), \
 /*
  *	Constructor of class WongCat with type parameter
  */
-WongCat::WongCat( const std::string type ) :	A_Animal(type), \
+WongCat::WongCat( const std::string type ) :	AAnimal(type), \
 												Cat(type), \
 												WongAnimal(type)
 {
@@ -37,7 +37,7 @@ WongCat::WongCat( const std::string type ) :	A_Animal(type), \
 /*
  *	Copy constructor of class WongCat, copy the value of src to the current object
  */
-WongCat::WongCat( const WongCat &src_object ) :	A_Animal(src_object), \
+WongCat::WongCat( const WongCat &src_object ) :	AAnimal(src_object), \
 												Cat(src_object), \
 												WongAnimal(src_object)
 {

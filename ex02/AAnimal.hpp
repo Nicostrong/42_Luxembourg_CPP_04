@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A_Animal.hpp                                       :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:17 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:52:14 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:03:14 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 
-class	A_Animal
+class	AAnimal
 {
 	protected:
 
@@ -23,12 +23,12 @@ class	A_Animal
 
 	public:
 
-		A_Animal( void );
-		A_Animal( std::string type );
-		A_Animal( const A_Animal &src_object );
-		virtual ~A_Animal( void );
+		AAnimal( void );
+		AAnimal( std::string type );
+		AAnimal( const AAnimal &src_object );
+		virtual ~AAnimal( void );
 
-		virtual A_Animal		&operator=( const A_Animal &src_object );
+		virtual AAnimal		&operator=( const AAnimal &src_object );
 
 		/*	Getter	*/
 		virtual std::string	getType( void ) const;

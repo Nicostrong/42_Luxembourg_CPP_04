@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/17 10:06:44 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/18 13:25:41 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/19 08:07:04 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ MYLIBS_BONUS	=
 ################################################################################
 
 SRC				=	main.cpp \
-					A_Animal.cpp \
+					AAnimal.cpp \
 					Dog.cpp \
 					Cat.cpp \
 					WongCat.cpp \

@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:39:02 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:55:53 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:06:23 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
  *	Default Construnctor of class WongAnimal
  */
-WongAnimal::WongAnimal( void ) : A_Animal("WongAnimal")
+WongAnimal::WongAnimal( void ) : AAnimal("WongAnimal")
 {
 	std::cout << "Default constructor WongAnimal called" << std::endl;
 	return ;
@@ -24,7 +24,7 @@ WongAnimal::WongAnimal( void ) : A_Animal("WongAnimal")
 /*
  *	Constructor of class WongAnimal with type parameter
  */
-WongAnimal::WongAnimal( const std::string type ) : A_Animal(type)
+WongAnimal::WongAnimal( const std::string type ) : AAnimal(type)
 {
 	std::cout << "Constructor WongAnimal called with parameter type" << std::endl;
 	return ;
@@ -33,7 +33,7 @@ WongAnimal::WongAnimal( const std::string type ) : A_Animal(type)
 /*
  *	Copy constructor of class WongAnimal, copy the value of src to the current object
  */
-WongAnimal::WongAnimal( const WongAnimal &src_object ) : A_Animal(src_object)
+WongAnimal::WongAnimal( const WongAnimal &src_object ) : AAnimal(src_object)
 {
 	std::cout << "Copy constructor WongAnimal called" << std::endl;
 	return ;

@@ -6,17 +6,17 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:47 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:51:26 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:05:59 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class	Dog : public A_Animal
+class	Dog : public AAnimal
 {
 	private:
 

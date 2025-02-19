@@ -6,16 +6,16 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:38:09 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:51:26 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:06:32 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WONGANIMAL_HPP
 # define WONGANIMAL_HPP
 
-# include "A_Animal.hpp"
+# include "AAnimal.hpp"
 
-class	WongAnimal : public virtual A_Animal
+class	WongAnimal : public virtual AAnimal
 {
 	public:
 

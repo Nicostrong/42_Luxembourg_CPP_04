@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A_A_Animal.cpp                                       :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:03 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:53:04 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:04:28 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "A_Animal.hpp"
+#include "AAnimal.hpp"
 
 /*
- *	Default constructor of class A_Animal
+ *	Default constructor of class AAnimal
  */
-A_Animal::A_Animal( void ) : _type("A_Animal")
+AAnimal::AAnimal( void ) : _type("AAnimal")
 {
-	std::cout << "Default constructor A_Animal called" << std::endl;
+	std::cout << "Default constructor AAnimal called" << std::endl;
 	return ;
 }
 
 /*
- *	Constructor of class A_Animal with type parameter
+ *	Constructor of class AAnimal with type parameter
  */
-A_Animal::A_Animal( const std::string type ) : _type(type)
+AAnimal::AAnimal( const std::string type ) : _type(type)
 {
-	std::cout << "Constructor A_Animal called with parameter type" << std::endl;
+	std::cout << "Constructor AAnimal called with parameter type" << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class A_Animal, copy the value of src to the current object
+ *	Copy constructor of class AAnimal, copy the value of src to the current object
  */
-A_Animal::A_Animal( const A_Animal &src_object ) : _type(src_object._type)
+AAnimal::AAnimal( const AAnimal &src_object ) : _type(src_object._type)
 {
-	std::cout << "Copy constructor A_Animal called" << std::endl;
+	std::cout << "Copy constructor AAnimal called" << std::endl;
 	return ;
 }
 
 /*
- *	Destructor of class A_Animal
+ *	Destructor of class AAnimal
  */
-A_Animal::~A_Animal( void )
+AAnimal::~AAnimal( void )
 {
-	std::cout << "Destructor of class A_Animal called" << std::endl;
+	std::cout << "Destructor of class AAnimal called" << std::endl;
 	return ;
 }
 
@@ -55,9 +55,9 @@ A_Animal::~A_Animal( void )
 /*
  *	Assignation operator overload
  */
-A_Animal	&A_Animal::operator=( const A_Animal &src_object )
+AAnimal	&AAnimal::operator=( const AAnimal &src_object )
 {
-	std::cout << "Copy assignation operator of class A_Animal called" << std::endl;
+	std::cout << "Copy assignation operator of class AAnimal called" << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
@@ -66,8 +66,7 @@ A_Animal	&A_Animal::operator=( const A_Animal &src_object )
 /*
  *	Getter for the type attribute
  */
-std::string	A_Animal::getType( void ) const
+std::string	AAnimal::getType( void ) const
 {
 	return (this->_type);
 }
-

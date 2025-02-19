@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:10 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:54:57 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 08:05:41 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
  *	Default Constructor of class Dog
  */
-Dog::Dog( void ) : A_Animal("Dog")
+Dog::Dog( void ) : AAnimal("Dog")
 {
 	std::cout << "Default constructor Dog called" << std::endl;
 	_brain = new Brain();
@@ -25,7 +25,7 @@ Dog::Dog( void ) : A_Animal("Dog")
 /*
  *	Constructor of class Dog with type parameter
  */
-Dog::Dog( const std::string type ) : A_Animal(type)
+Dog::Dog( const std::string type ) : AAnimal(type)
 {
 	std::cout << "Constructor Dog called with parameter type" << std::endl;
 	_brain = new Brain();
@@ -35,7 +35,7 @@ Dog::Dog( const std::string type ) : A_Animal(type)
 /*
  *	Copy constructor of class Dog, copy the value of src to the current object
  */
-Dog::Dog( const Dog &src_object ) : A_Animal(src_object)
+Dog::Dog( const Dog &src_object ) : AAnimal(src_object)
 {
 	std::cout << "Copy constructor Dog called" << std::endl;
 	_brain = new Brain(*src_object._brain);
@@ -60,7 +60,7 @@ Dog	&Dog::operator=( const Dog &src_object )
 	std::cout << "Assignation operator overload Dog called" << std::endl;
 	if (this != &src_object)
 	{
-		A_Animal::operator=(src_object);
+		AAnimal::operator=(src_object);
 		delete _brain;
 		_brain = new Brain(*src_object._brain);
 	}
