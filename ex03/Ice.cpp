@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 14:38:19 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 16:34:42 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:38:14 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor
@@ -42,11 +46,15 @@ Ice::~Ice( void )
 /*
  *	Assignation opertor overide
  */
-Ice	&Ice::operator=( Ice const &src_object )
+Ice			&Ice::operator=( Ice const &src_object )
 {
 	AMateria::operator=(src_object);
 	return (*this);
 }
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Methode clone
@@ -60,7 +68,7 @@ AMateria	*Ice::clone( void ) const
 /*
  *	Methode use
  */
-void	Ice::use( ICharacter &target )
+void		Ice::use( ICharacter &target )
 {
 	std::cout	<< "* Shoots an ice bolt at "
 				<< target.getName()

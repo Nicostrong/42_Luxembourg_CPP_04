@@ -6,12 +6,16 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:36 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 12:47:01 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:33:57 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 #include "AMateria.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Constructor with parameter name
@@ -62,7 +66,7 @@ Character::~Character( void )
 /*
  *	Operator affectation overide
  */
-Character	&Character::operator=( Character const &src_object )
+Character			&Character::operator=( Character const &src_object )
 {
 	std::cout << "Character assignation operator called." << std::endl;
 	if (this != &src_object)
@@ -78,6 +82,10 @@ Character	&Character::operator=( Character const &src_object )
 	return (*this);
 }
 
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
+
 /*
  *	Getter
  */
@@ -86,10 +94,14 @@ std::string const	&Character::getName( void ) const
 	return (this->_name);
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
 /*
  *	Add a new Materia if space on inventary array
  */
-void	Character::equip( AMateria *m )
+void				Character::equip( AMateria *m )
 {
 	if (!m)
 	{
@@ -118,7 +130,7 @@ void	Character::equip( AMateria *m )
 /*
  *	Remove a Materia of inventary
  */
-void	Character::unequip( int idx )
+void				Character::unequip( int idx )
 {
 	if( idx < 0 || idx >= 4 || !this->_inventory[idx])
 	{
@@ -141,7 +153,7 @@ void	Character::unequip( int idx )
 /*
  *	Use materia of inventory
  */
-void	Character::use( int idx, ICharacter &target )
+void				Character::use( int idx, ICharacter &target )
 {
 	if( idx < 0 || idx >= 4 || !this->_inventory[idx])
 	{
@@ -154,7 +166,7 @@ void	Character::use( int idx, ICharacter &target )
 	return ;
 }
 
-void	Character::dropMateria( int idx )
+void				Character::dropMateria( int idx )
 {
     if (idx >= 0 && idx < 4 && _inventory[idx])
 	{
@@ -169,7 +181,7 @@ void	Character::dropMateria( int idx )
 	return ;
 }
 
-void	Character::pickupMateria( void )
+void				Character::pickupMateria( void )
 {
     AMateria* m = Ground::pickMateria();
     if (m)

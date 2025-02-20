@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:07:38 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 12:39:22 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:31:28 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor
@@ -52,12 +56,16 @@ AMateria::~AMateria( void )
 /*
  *	AMateria opertor overide
  */
-AMateria	&AMateria::operator=( AMateria const &src_object )
+AMateria			&AMateria::operator=( AMateria const &src_object )
 {
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
 }
+
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
 
 /*
  *	Getter
@@ -67,10 +75,14 @@ std::string const	&AMateria::getType( void ) const
 	return (this->_type);
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
 /*
  *	Methode use
  */
-void	AMateria::use( ICharacter &target )
+void				AMateria::use( ICharacter &target )
 {
 	std::cout	<< "* uses "
 				<< this->_type

@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 14:38:32 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 16:39:07 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:36:03 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor
@@ -42,11 +46,15 @@ Cure::~Cure( void )
 /*
  *	Assignation opertor overide
  */
-Cure	&Cure::operator=( Cure const &src_object )
+Cure		&Cure::operator=( Cure const &src_object )
 {
 	AMateria::operator=(src_object);
 	return (*this);
 }
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Methode clone
@@ -60,7 +68,7 @@ AMateria	*Cure::clone( void ) const
 /*
  *	Methode use
  */
-void	Cure::use( ICharacter &target )
+void		Cure::use( ICharacter &target )
 {
 	std::cout	<< "* Heals "
 				<< target.getName()

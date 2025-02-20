@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:55:25 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:21:56 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:07:16 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class	Brain
 
 	public:
 
+		/*	Canonical Form	*/
 		Brain( void );
 		Brain( std::string idea );
 		Brain( const Brain &src_object );
@@ -31,8 +32,10 @@ class	Brain
 
 		Brain		&operator=( const Brain &src_object );
 
-		/*	Methodes	*/
+		/*	Setter	*/
 		void		setIdea( const std::string idea, int index );
+
+		/*	Getter	*/
 		std::string	getIdea( int index ) const;
 
 };

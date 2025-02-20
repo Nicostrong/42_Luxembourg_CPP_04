@@ -6,18 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 08:05:48 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:25:15 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Cat.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default Constructor of class Cat
  */
 Cat::Cat( void ) : AAnimal("Cat")
 {
-	std::cout << "Default constructor Cat called" << std::endl;
+	std::cout << "Default constructor Cat called." << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -27,17 +31,17 @@ Cat::Cat( void ) : AAnimal("Cat")
  */
 Cat::Cat( const std::string type ) : AAnimal(type)
 {
-	std::cout << "Constructor Cat called with parameter type" << std::endl;
+	std::cout << "Constructor Cat with parameter type called." << std::endl;
 	_brain = new Brain();
 	return ;
 }
 
 /*
- *	Copy constructor of class Cat, copy the value of src to the current object
+ *	Copy constructor of class Cat
  */
 Cat::Cat( const Cat &src_object ) : AAnimal(src_object)
 {
-	std::cout << "Copy constructor Cat called" << std::endl;
+	std::cout << "Copy constructor Cat called." << std::endl;
 	_brain = new Brain(*src_object._brain);
 	return ;
 }
@@ -47,7 +51,7 @@ Cat::Cat( const Cat &src_object ) : AAnimal(src_object)
  */
 Cat::~Cat( void )
 {
-	std::cout << "Destructor of class Cat called" << std::endl;
+	std::cout << "Destructor of class Cat called." << std::endl;
 	delete _brain;
 	return ;
 }
@@ -55,7 +59,7 @@ Cat::~Cat( void )
 /*
  *	Assignation operator overload
  */
-Cat	&Cat::operator=( const Cat &src_object )
+Cat			&Cat::operator=( const Cat &src_object )
 {
 	std::cout << "Assignation operator overload Cat called" << std::endl;
 	if (this != &src_object)
@@ -67,28 +71,40 @@ Cat	&Cat::operator=( const Cat &src_object )
 	return (*this);
 }
 
-/*
- *	Methode makeSound of class Cat
- */
-void	Cat::makeSound( void ) const
-{
-	std::cout << "Meow! Meow!" << std::endl;
-	return ;
-}
+/*******************************************************************************
+ *								SETTER										   *
+ ******************************************************************************/
 
 /*
- *	Methode setIdea
+ *	Methode setIdea of class Cat
  */
-void	Cat::setIdea( std::string idea, int index )
+void		Cat::setIdea( std::string idea, int index )
 {
 	_brain->setIdea(idea, index);
 	return ;
 }
 
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
+
 /*
- *	Methode getIdea
+ *	Methode getIdea of class Cat
  */
 std::string	Cat::getIdea( int index ) const
 {
 	return (_brain->getIdea(index));
+}
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
+/*
+ *	Methode makeSound of class Cat
+ */
+void		Cat::makeSound( void ) const
+{
+	std::cout << "Meow! Meow!" << std::endl;
+	return ;
 }

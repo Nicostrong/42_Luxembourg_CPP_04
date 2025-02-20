@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:07:55 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 10:38:15 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:32:01 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class	AMateria
 
 	public:
 
+		/*	Canonical Form	*/
 		AMateria( void );
 		AMateria( std::string const &type );
 		AMateria( AMateria const &src_object );
@@ -36,7 +37,10 @@ class	AMateria
 
 		virtual AMateria	&operator=( AMateria const &src_object );
 
+		/*	Getter	*/
 		std::string const	&getType( void ) const;
+
+		/*	Method	*/
 		virtual AMateria	*clone( void ) const = 0;
 		virtual void		use( ICharacter &target );
 

@@ -6,18 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:03 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 08:04:28 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:21:15 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AAnimal.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor of class AAnimal
  */
 AAnimal::AAnimal( void ) : _type("AAnimal")
 {
-	std::cout << "Default constructor AAnimal called" << std::endl;
+	std::cout << "Default constructor AAnimal called." << std::endl;
 	return ;
 }
 
@@ -26,7 +30,7 @@ AAnimal::AAnimal( void ) : _type("AAnimal")
  */
 AAnimal::AAnimal( const std::string type ) : _type(type)
 {
-	std::cout << "Constructor AAnimal called with parameter type" << std::endl;
+	std::cout << "Constructor AAnimal with parameter type called." << std::endl;
 	return ;
 }
 
@@ -35,7 +39,7 @@ AAnimal::AAnimal( const std::string type ) : _type(type)
  */
 AAnimal::AAnimal( const AAnimal &src_object ) : _type(src_object._type)
 {
-	std::cout << "Copy constructor AAnimal called" << std::endl;
+	std::cout << "Copy constructor AAnimal called." << std::endl;
 	return ;
 }
 
@@ -44,24 +48,24 @@ AAnimal::AAnimal( const AAnimal &src_object ) : _type(src_object._type)
  */
 AAnimal::~AAnimal( void )
 {
-	std::cout << "Destructor of class AAnimal called" << std::endl;
+	std::cout << "Destructor of class AAnimal called." << std::endl;
 	return ;
 }
-
-/*******************************************************************************
- *							OVERLOAD OPERATOR								   *
- ******************************************************************************/
 
 /*
  *	Assignation operator overload
  */
-AAnimal	&AAnimal::operator=( const AAnimal &src_object )
+AAnimal		&AAnimal::operator=( const AAnimal &src_object )
 {
-	std::cout << "Copy assignation operator of class AAnimal called" << std::endl;
+	std::cout << "Copy assignation operator of class AAnimal called." << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
 }
+
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
 
 /*
  *	Getter for the type attribute

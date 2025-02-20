@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 09:41:22 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:34:28 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ class	Character : public	ICharacter
 
 	public:
 	
+		/*	Canonical Form	*/
 		Character( std::string name );
 		Character( Character const &src_object );
 		virtual ~Character( void );
 
-		Character &operator=( Character const &src_object );
+		Character 			&operator=( Character const &src_object );
 		
+		/*	Method	*/
 		std::string const	&getName( void ) const;
 		void				equip( AMateria *m);
 		void				unequip( int idx );

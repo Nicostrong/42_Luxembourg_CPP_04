@@ -6,12 +6,16 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:09:20 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 12:38:42 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:37:24 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ground.hpp"
 #include "AMateria.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Definition of static member
@@ -51,7 +55,7 @@ Ground::~Ground( void )
 /*
  *	Operator affectation overload
  */
-Ground	&Ground::operator=( const Ground &src_object )
+Ground		&Ground::operator=( const Ground &src_object )
 {
 	if (this != &src_object)
 	{
@@ -63,11 +67,14 @@ Ground	&Ground::operator=( const Ground &src_object )
 	return (*this);
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Add a materia in inventary of ground
  */
-void	Ground::dropMateria( AMateria *materia )
+void		Ground::dropMateria( AMateria *materia )
 {
 	if (_groundIndex < 100)
 		_ground[_groundIndex++] = materia;
@@ -98,7 +105,7 @@ AMateria	*Ground::pickMateria( void )
 /*
  *	Clear ground inventary
  */
- void	Ground::clearGround( void )
+ void		Ground::clearGround( void )
 {
 	for (int i = 0; i < _groundIndex; ++i)
 	{

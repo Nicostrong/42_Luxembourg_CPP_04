@@ -6,18 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:19:54 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:08:40 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:43:11 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor
  */
 MateriaSource::MateriaSource( void )
 {
-	std::cout << "Default constructor MateriaSource called" << std::endl;
+	std::cout << "Default constructor MateriaSource called." << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->_materias[i] = NULL;
 	return ;
@@ -28,7 +32,7 @@ MateriaSource::MateriaSource( void )
  */
 MateriaSource::MateriaSource( MateriaSource const &src_object )
 {
-	std::cout << "Copy constructor MateriaSource called" << std::endl;
+	std::cout << "Copy constructor MateriaSource called." << std::endl;
 	*this = src_object;
 	return ;
 }
@@ -38,7 +42,7 @@ MateriaSource::MateriaSource( MateriaSource const &src_object )
  */
 MateriaSource::~MateriaSource( void )
 {
-	std::cout << "Destructor of class MateriaSource called" << std::endl;
+	std::cout << "Destructor of class MateriaSource called." << std::endl;
 	for (int i = 0; i < 4; i++)
 		if (this->_materias[i])
 			delete this->_materias[i];
@@ -50,7 +54,7 @@ MateriaSource::~MateriaSource( void )
  */
 MateriaSource	&MateriaSource::operator=( MateriaSource const &src_object )
 {
-	std::cout << "Assignation operator overload MateriaSource called" << std::endl;
+	std::cout << "Assignation operator overload MateriaSource called." << std::endl;
 	if (this != &src_object)
 	{
 		for (int i = 0; i < 4; i++)
@@ -63,10 +67,14 @@ MateriaSource	&MateriaSource::operator=( MateriaSource const &src_object )
 	return (*this);
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
 /*
  *	Methode learnMateria 
  */
-void	MateriaSource::learnMateria( AMateria *materia )
+void			MateriaSource::learnMateria( AMateria *materia )
 {
 	if (!materia)
 	{
@@ -94,7 +102,7 @@ void	MateriaSource::learnMateria( AMateria *materia )
 /*
  *	Create a new Materia from stored one
  */
-AMateria	*MateriaSource::createMateria( std::string const &type )
+AMateria		*MateriaSource::createMateria( std::string const &type )
 {
 	for (int i = 0; i < 4; i++)
 	{

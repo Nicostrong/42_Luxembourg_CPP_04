@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 14:38:13 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 17:16:08 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:38:41 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ class	Ice : public	AMateria
 {
 	public:
 
+		/*	Canonical Form	*/
 		Ice( void );
 		Ice( Ice const &src_object );
 		virtual ~Ice( void );
 
 		Ice			&operator=( Ice const &src_object );
 
+		/*	Method	*/
 		AMateria	*clone( void ) const;
-		using AMateria::use;
+		using		AMateria::use;
 		void		use( ICharacter &target );
 
 };

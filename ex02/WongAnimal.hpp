@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:38:09 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 08:06:32 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:29:16 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ class	WongAnimal : public virtual AAnimal
 {
 	public:
 
+		/*	Canonical Form	*/
 		WongAnimal( void );
 		WongAnimal( std::string type );
 		WongAnimal( const WongAnimal &src_object );
 		virtual ~WongAnimal( void );
+
 		virtual WongAnimal	&operator=( const WongAnimal &src_object );
 
-		/*	Methodes	*/
+		/*	Method	*/
 		void				makeSound( void ) const;
 
 };

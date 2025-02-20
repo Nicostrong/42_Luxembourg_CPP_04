@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:55 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/17 11:21:56 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:08:38 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,22 @@ class	Cat : public virtual Animal
 
 	public:
 
+		/*	Canonical Form	*/
 		Cat( void );
 		Cat( std::string type );
 		Cat( const Cat &src_object );
 		virtual ~Cat( void );
+
 		virtual Cat	&operator=( const Cat &src_object );
 
-		/*	Methodes	*/
-		void		makeSound( void ) const;
+		/*	Setter	*/
 		void		setIdea( const std::string idea, int index );
+
+		/*	Getter	*/
 		std::string	getIdea( int index ) const;
+
+		/*	Method	*/
+		void		makeSound( void ) const;
 
 };
 

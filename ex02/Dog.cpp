@@ -6,18 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:10 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 08:05:41 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:27:36 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Dog.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default Constructor of class Dog
  */
 Dog::Dog( void ) : AAnimal("Dog")
 {
-	std::cout << "Default constructor Dog called" << std::endl;
+	std::cout << "Default constructor Dog called." << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -27,17 +31,17 @@ Dog::Dog( void ) : AAnimal("Dog")
  */
 Dog::Dog( const std::string type ) : AAnimal(type)
 {
-	std::cout << "Constructor Dog called with parameter type" << std::endl;
+	std::cout << "Constructor Dog with parameter type called." << std::endl;
 	_brain = new Brain();
 	return ;
 }
 
 /*
- *	Copy constructor of class Dog, copy the value of src to the current object
+ *	Copy constructor of class Dog
  */
 Dog::Dog( const Dog &src_object ) : AAnimal(src_object)
 {
-	std::cout << "Copy constructor Dog called" << std::endl;
+	std::cout << "Copy constructor Dog called." << std::endl;
 	_brain = new Brain(*src_object._brain);
 	return ;
 }
@@ -47,7 +51,7 @@ Dog::Dog( const Dog &src_object ) : AAnimal(src_object)
  */
 Dog::~Dog( void )
 {
-	std::cout << "Destructor of class Dog called" << std::endl;
+	std::cout << "Destructor of class Dog called." << std::endl;
 	delete _brain;
 	return ;
 }
@@ -55,7 +59,7 @@ Dog::~Dog( void )
 /*
  *	Assignation operator overload
  */
-Dog	&Dog::operator=( const Dog &src_object )
+Dog			&Dog::operator=( const Dog &src_object )
 {
 	std::cout << "Assignation operator overload Dog called" << std::endl;
 	if (this != &src_object)
@@ -67,29 +71,39 @@ Dog	&Dog::operator=( const Dog &src_object )
 	return (*this);
 }
 
-/*
- *	Methode makeSound of class Dog
- */
-void	Dog::makeSound( void ) const
-{
-	std::cout << "Woof! Woof!" << std::endl;
-	return ;
-}
+/*******************************************************************************
+ *								SETTER										   *
+ ******************************************************************************/
 
 /*
- *	Methode setIdea
+ *	Setter setIdea
  */
-void	Dog::setIdea( std::string idea, int index )
+void		Dog::setIdea( std::string idea, int index )
 {
 	_brain->setIdea(idea, index);
 	return ;
 }
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
 
 /*
- *	Methode getIdea
+ *	Getter getIdea
  */
 std::string	Dog::getIdea( int index ) const
 {
 	return (_brain->getIdea(index));
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
+/*
+ *	Methode makeSound of class Dog
+ */
+void		Dog::makeSound( void ) const
+{
+	std::cout << "Woof! Woof!" << std::endl;
+	return ;
+}

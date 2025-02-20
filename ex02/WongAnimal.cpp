@@ -6,18 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:39:02 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 08:06:23 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 09:29:01 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WongAnimal.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default Construnctor of class WongAnimal
  */
 WongAnimal::WongAnimal( void ) : AAnimal("WongAnimal")
 {
-	std::cout << "Default constructor WongAnimal called" << std::endl;
+	std::cout << "Default constructor WongAnimal called." << std::endl;
 	return ;
 }
 
@@ -26,16 +30,16 @@ WongAnimal::WongAnimal( void ) : AAnimal("WongAnimal")
  */
 WongAnimal::WongAnimal( const std::string type ) : AAnimal(type)
 {
-	std::cout << "Constructor WongAnimal called with parameter type" << std::endl;
+	std::cout << "Constructor WongAnimal with parameter type called." << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class WongAnimal, copy the value of src to the current object
+ *	Copy constructor of class WongAnimal
  */
 WongAnimal::WongAnimal( const WongAnimal &src_object ) : AAnimal(src_object)
 {
-	std::cout << "Copy constructor WongAnimal called" << std::endl;
+	std::cout << "Copy constructor WongAnimal called." << std::endl;
 	return ;
 }
 
@@ -44,7 +48,7 @@ WongAnimal::WongAnimal( const WongAnimal &src_object ) : AAnimal(src_object)
  */
 WongAnimal::~WongAnimal( void )
 {
-	std::cout << "Destructor of class WongAnimal called" << std::endl;
+	std::cout << "Destructor of class WongAnimal called." << std::endl;
 	return ;
 }
 
@@ -53,11 +57,15 @@ WongAnimal::~WongAnimal( void )
  */
 WongAnimal	&WongAnimal::operator=( const WongAnimal &src_object )
 {
-	std::cout << "Assignation operator overload WongAnimal called" << std::endl;
+	std::cout << "Assignation operator overload WongAnimal called." << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
 }
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Method to make sound of WongAnimal
