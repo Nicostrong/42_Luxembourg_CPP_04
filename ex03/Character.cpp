@@ -6,21 +6,22 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:36 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:33:57 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/21 07:37:54 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 #include "AMateria.hpp"
+#include "Ground.hpp"
 
 /*******************************************************************************
  *							CANONICAL FORM									   *
  ******************************************************************************/
 
 /*
- *	Constructor with parameter name
+ *	Constructor with all parameter
  */
-Character::Character( std::string name ) : _name(name)
+Character::Character( std::string name, Ground *ground ) : _name(name), _ground(ground)
 {
 	std::cout	<< "Character "
 				<< name
@@ -34,7 +35,7 @@ Character::Character( std::string name ) : _name(name)
 /*
  *	Copy constructor
  */
-Character::Character( Character const &src_object )
+Character::Character( Character const &src_object ) : _ground(src_object._ground)
 {
 	std::cout << "Character copy constructor called." << std::endl;
 	this->_name = src_object._name;
@@ -72,6 +73,7 @@ Character			&Character::operator=( Character const &src_object )
 	if (this != &src_object)
 	{
 		this->_name = src_object._name;
+		this->_ground = src_object._ground;
 		for (int i = 0; i < 4; i++)
 		{
 			if (this->_inventory[i])
@@ -122,8 +124,16 @@ void				Character::equip( AMateria *m )
 			return ;
 		}
 	}
-	std::cout << this->_name << "'s inventory is full." << std::endl;
-	delete m;
+	std::cout	<< this->_name
+				<< "'s inventory is full. Dropping materia to ground."
+				<< std::endl;
+	if (_ground)
+		_ground->dropMateria(m);
+	else
+	{
+		std::cout << "No ground to drop materia." << std::endl;
+		delete m;
+	}
 	return ;
 }
 

@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/17 10:06:44 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/19 09:46:25 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/21 07:40:57 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ SRC				=	main.cpp \
 
 OBJ				=	$(SRC:.cpp=.o)
 
-NAME			=	AMateria
+NAME			=	Game
 
 ################################################################################
 #	Bonus part																   #

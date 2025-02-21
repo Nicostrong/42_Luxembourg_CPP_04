@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:09:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:34:28 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/21 07:38:09 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ class	Character : public	ICharacter
 
 		std::string	_name;
 		AMateria	*_inventory[4];
+		Ground		*_ground;
 
 	public:
 	
 		/*	Canonical Form	*/
-		Character( std::string name );
+		Character( std::string name, Ground *ground );
 		Character( Character const &src_object );
 		virtual ~Character( void );
 

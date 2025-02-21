@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:09:20 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:37:24 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/21 07:30:44 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,18 @@ Ground		&Ground::operator=( const Ground &src_object )
 void		Ground::dropMateria( AMateria *materia )
 {
 	if (_groundIndex < 100)
+	{
 		_ground[_groundIndex++] = materia;
-	std::cout 	<< "Materia "
-				<< materia->getType()
-				<<	" Add to inventary Ground"
-				<< std::endl;
+		std::cout 	<< "Materia "
+					<< materia->getType()
+					<<	" Add to inventary Ground"
+					<< std::endl;
+	}
+	else
+	{
+		std::cout << "Ground inventary is full." << std::endl;
+		delete materia;
+	}
 	return ;
 }
 

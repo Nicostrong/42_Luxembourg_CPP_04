@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:07:24 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 12:31:13 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/21 07:46:57 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	separator( std::string title )
 
 int		main( void )
 {
+	Ground	ground;
 	separator("TEST: Creation de MateriaSource");
 	MateriaSource	src;
 	
@@ -38,8 +39,8 @@ int		main( void )
 	src.learnMateria(new Ice()); // Ne doit pas être appris (limite de 4)
 
 	separator("TEST: Creation de personnages");
-	Character	player("Player");
-	Character	bob("Bob");
+	Character	player("Player", &ground);
+	Character	bob("Bob", &ground);
 
 	separator("TEST: Creation et equipement de Materias");
 	AMateria	*m1 = src.createMateria("ice");
@@ -80,7 +81,7 @@ int		main( void )
 	playerCopy.use(1, bob); // Ne doit pas fonctionner (déséquipé avant la copie)
 
 	separator("TEST: Verification de l'assignation (operator=)");
-	Character	newPlayer("NewPlayer");
+	Character	newPlayer("NewPlayer", &ground);
 	newPlayer = player; // Assignation
 	newPlayer.use(0, bob); // Ice doit fonctionner
 
