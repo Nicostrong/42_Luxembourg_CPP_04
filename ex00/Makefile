@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/17 10:06:44 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/18 13:23:29 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/03/04 07:36:20 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,8 +66,8 @@ SRC				=	main.cpp \
 					Animal.cpp \
 					Dog.cpp \
 					Cat.cpp \
-					WongCat.cpp \
-					WongAnimal.cpp
+					WrongCat.cpp \
+					WrongAnimal.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 

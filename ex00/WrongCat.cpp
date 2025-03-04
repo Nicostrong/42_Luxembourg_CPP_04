@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WongCat.cpp                                        :+:      :+:    :+:   */
+/*   WrongCat.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,65 +10,66 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WongCat.hpp"
+#include "WrongCat.hpp"
 
 /*******************************************************************************
  *							CANONICAL FORM									   *
  ******************************************************************************/
 
 /*
- *	Default Constructor of class WongCat
+ *	Default Constructor of class WrongCat
  */
-WongCat::WongCat( void ) :	Animal("WongCat"), \
-							Cat("WongCat"), \
-							WongAnimal("WongCat")
+WrongCat::WrongCat( void ) :	WrongAnimal("WrongCat")
 {
-	std::cout << "Default constructor WongCat called." << std::endl;
+	std::cout	<< MAGENTA
+				<< "Default constructor WrongCat called."
+				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Constructor of class WongCat with type parameter
+ *	Constructor of class WrongCat with type parameter
  */
-WongCat::WongCat( const std::string type ) :	Animal(type), \
-												Cat(type), \
-												WongAnimal(type)
+WrongCat::WrongCat( const std::string type ) :	WrongAnimal(type)
 {
-	std::cout << "Constructor WongCat with parameter type called." << std::endl;
+	std::cout	<< MAGENTA
+				<< "Constructor WrongCat with parameter type called."
+				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class WongCat
+ *	Copy constructor of class WrongCat
  */
-WongCat::WongCat( const WongCat &src_object ) :	Animal(src_object), \
-												Cat(src_object), \
-												WongAnimal(src_object)
+WrongCat::WrongCat( const WrongCat &src_object ) :	WrongAnimal(src_object)
 {
-	std::cout << "Copy constructor WongCat called." << std::endl;
+	std::cout	<< MAGENTA
+				<< "Copy constructor WrongCat called."
+				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Destructor of class WongCat
+ *	Destructor of class WrongCat
  */
-WongCat::~WongCat( void )
+WrongCat::~WrongCat( void )
 {
-	std::cout << "Destructor of class WongCat called." << std::endl;
+	std::cout	<< MAGENTA
+				<< "Destructor of class WrongCat called."
+				<< RESET << std::endl;
 	return ;
 }
 
 /*
  *	Assignation operator overload
  */
-WongCat		&WongCat::operator=( const WongCat &src_object )
+WrongCat		&WrongCat::operator=( const WrongCat &src_object )
 {
-	std::cout << "Assignation operator overload WongCat called." << std::endl;
+	std::cout	<< MAGENTA
+				<< "Assignation operator overload WrongCat called."
+				<< RESET << std::endl;
 	if (this != &src_object)
-	{
-		this->Cat::operator=(src_object);
-		this->WongAnimal::operator=(src_object);
-	}
+		this->WrongAnimal::operator=(src_object);
 	return (*this);
 }
 
@@ -77,10 +78,12 @@ WongCat		&WongCat::operator=( const WongCat &src_object )
  ******************************************************************************/
 
 /*
- *	Method to make sound of WongCat
+ *	Method to make sound of WrongCat
  */
-void		WongCat::makeSound( void ) const
+void		WrongCat::makeSound( void ) const
 {
-	std::cout << "Meow-Wong!" << std::endl;
+	std::cout	<< MAGENTA
+				<< "Meow-Wrong!"
+				<< RESET << std::endl;
 	return ;
 }

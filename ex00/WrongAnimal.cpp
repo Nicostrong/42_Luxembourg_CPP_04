@@ -1,71 +1,72 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 09:11:03 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/03/04 09:26:23 by nfordoxc         ###   Luxembourg.lu     */
+/*   Created: 2025/02/17 09:39:02 by nfordoxc          #+#    #+#             */
+/*   Updated: 2025/03/04 09:58:42 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 /*******************************************************************************
  *							CANONICAL FORM									   *
  ******************************************************************************/
 
 /*
- *	Default constructor of class Animal
+ *	Default Construnctor of class WrongAnimal
  */
-Animal::Animal( void ) : _type("Animal")
+WrongAnimal::WrongAnimal( void ) : _type("WrongAnimal")
 {
-	std::cout	<< GREEN
-				<< "Default constructor Animal called."
+	std::cout	<< RED
+				<< "Default constructor WrongAnimal called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Constructor of class Animal with type parameter
+ *	Constructor of class WrongAnimal with type parameter
  */
-Animal::Animal( const std::string type ) : _type(type)
+WrongAnimal::WrongAnimal( const std::string type ) : _type(type)
 {
-	std::cout	<< GREEN
-				<< "Constructor Animal with parameter type called."
+	std::cout	<< RED
+				<< "Constructor WrongAnimal with parameter type called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class Animal
+ *	Copy constructor of class WrongAnimal
  */
-Animal::Animal( const Animal &src_object ) : _type(src_object._type)
+WrongAnimal::WrongAnimal( const WrongAnimal &src_object ) : _type(src_object._type)
 {
-	std::cout	<< GREEN
-				<< "Copy constructor Animal called."
+	std::cout	<< RED
+				<< "Copy constructor WrongAnimal called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Destructor of class Animal
+ *	Destructor of class WrongAnimal
  */
-Animal::~Animal( void )
+WrongAnimal::~WrongAnimal( void )
 {
-	std::cout	<< GREEN
-				<< "Destructor of class Animal called."
+	std::cout	<< RED
+				<< "Destructor of class WrongAnimal called."
 				<< RESET << std::endl;
 	return ;
 }
+
 /*
  *	Assignation operator overload
  */
-Animal		&Animal::operator=( const Animal &src_object )
+WrongAnimal	&WrongAnimal::operator=( const WrongAnimal &src_object )
 {
-	std::cout	<< GREEN
-				<< "Copy assignation operator of class Animal called."
+	std::cout	<< RED
+				<< "Assignation operator overload WrongAnimal called."
 				<< RESET << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
@@ -79,22 +80,22 @@ Animal		&Animal::operator=( const Animal &src_object )
 /*
  *	Getter for the type attribute
  */
-std::string	Animal::getType( void ) const
+std::string	WrongAnimal::getType( void ) const
 {
 	return (this->_type);
 }
 
 /*******************************************************************************
- *									METHOD									   *
+ *								METHOD										   *
  ******************************************************************************/
 
 /*
- *	Method makeSound of class Cat
+ *	Method to make sound of WrongAnimal
  */
-void	Animal::makeSound( void ) const
+void		WrongAnimal::makeSound( void ) const
 {
-	std::cout	<< GREEN
-				<< "Animal! Animal!"
+	std::cout	<< RED
+				<< "Wrong Wrong!"
 				<< RESET << std::endl;
 	return ;
 }

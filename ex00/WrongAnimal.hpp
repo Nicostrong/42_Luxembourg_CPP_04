@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 09:10:17 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/03/04 09:37:25 by nfordoxc         ###   Luxembourg.lu     */
+/*   Created: 2025/02/17 09:38:09 by nfordoxc          #+#    #+#             */
+/*   Updated: 2025/03/04 09:58:17 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 
@@ -46,27 +46,29 @@
 # define HIDDEN		"\033[8m"
 # define STRIKE		"\033[9m"
 
-class	Animal
+class	WrongAnimal
 {
-	protected:
 
-		std::string	_type;
+	private:
+
+		std::string		_type;
 
 	public:
 
 		/*	Canonical Form	*/
-		Animal( void );
-		Animal( std::string type );
-		Animal( const Animal &src_object );
-		virtual ~Animal( void );
-
-		virtual Animal		&operator=( const Animal &src_object );
+		WrongAnimal( void );
+		WrongAnimal( std::string type );
+		WrongAnimal( const WrongAnimal &src_object );
+		~WrongAnimal( void );
+		
+		WrongAnimal		&operator=( const WrongAnimal &src_object );
 
 		/*	Getter	*/
-		virtual std::string	getType( void ) const;
+		std::string		getType( void ) const;
 
-		/*	Method	*/
-		virtual void		makeSound( void ) const;
+		/*	Methode	*/
+		void			makeSound( void ) const;
+
 };
 
 #endif

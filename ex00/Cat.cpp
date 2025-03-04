@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:15:31 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 09:14:19 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
  */
 Cat::Cat( void ) : Animal("Cat")
 {
-	std::cout << "Default constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Default constructor Cat called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -30,7 +32,9 @@ Cat::Cat( void ) : Animal("Cat")
  */
 Cat::Cat( const std::string type ) : Animal(type)
 {
-	std::cout << "Constructor Cat with parameter type called." << std::endl;
+	std::cout	<< CYAN
+				<< "Constructor Cat with parameter type called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -39,7 +43,9 @@ Cat::Cat( const std::string type ) : Animal(type)
  */
 Cat::Cat( const Cat &src_object ) : Animal(src_object)
 {
-	std::cout << "Copy constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Copy constructor Cat called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -48,7 +54,9 @@ Cat::Cat( const Cat &src_object ) : Animal(src_object)
  */
 Cat::~Cat( void )
 {
-	std::cout << "Destructor of class Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Destructor of class Cat called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -57,7 +65,9 @@ Cat::~Cat( void )
  */
 Cat		&Cat::operator=( const Cat &src_object )
 {
-	std::cout << "Assignation operator overload Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Assignation operator overload Cat called."
+				<< RESET << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
@@ -72,6 +82,8 @@ Cat		&Cat::operator=( const Cat &src_object )
  */
 void	Cat::makeSound( void ) const
 {
-	std::cout << "Meow! Meow!" << std::endl;
+	std::cout	<< CYAN
+				<< "Meow! Meow!"
+				<< RESET << std::endl;
 	return ;
 }

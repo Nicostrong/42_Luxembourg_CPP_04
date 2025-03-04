@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:10 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:15:15 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 09:16:09 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
  */
 Dog::Dog( void ) : Animal("Dog")
 {
-	std::cout << "Default constructor Dog called." << std::endl;
+	std::cout	<< BLUE
+				<< "Default constructor Dog called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -30,7 +32,9 @@ Dog::Dog( void ) : Animal("Dog")
  */
 Dog::Dog( const std::string type ) : Animal(type)
 {
-	std::cout << "Constructor Dog with parameter type called." << std::endl;
+	std::cout	<< BLUE
+				<< "Constructor Dog with parameter type called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -39,7 +43,9 @@ Dog::Dog( const std::string type ) : Animal(type)
  */
 Dog::Dog( const Dog &src_object ) : Animal(src_object)
 {
-	std::cout << "Copy constructor Dog called." << std::endl;
+	std::cout	<< BLUE
+				<< "Copy constructor Dog called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -48,7 +54,9 @@ Dog::Dog( const Dog &src_object ) : Animal(src_object)
  */
 Dog::~Dog( void )
 {
-	std::cout << "Destructor of class Dog called." << std::endl;
+	std::cout	<< BLUE
+				<< "Destructor of class Dog called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -57,7 +65,9 @@ Dog::~Dog( void )
  */
 Dog		&Dog::operator=( const Dog &src_object )
 {
-	std::cout << "Assignation operator overload Dog called." << std::endl;
+	std::cout	<< BLUE
+				<< "Assignation operator overload Dog called."
+				<< RESET << std::endl;
 	if (this != &src_object)
 		this->_type = src_object._type;
 	return (*this);
@@ -72,6 +82,8 @@ Dog		&Dog::operator=( const Dog &src_object )
  */
 void	Dog::makeSound( void ) const
 {
-	std::cout << "Woof! Woof!" << std::endl;
+	std::cout	<< BLUE
+				<< "Woof! Woof!"
+				<< RESET << std::endl;
 	return ;
 }
