@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 10:55:25 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/03/04 11:10:58 by nfordoxc         ###   Luxembourg.lu     */
+/*   Created: 2025/02/17 09:38:09 by nfordoxc          #+#    #+#             */
+/*   Updated: 2025/03/04 09:58:17 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 
@@ -46,28 +46,28 @@
 # define HIDDEN		"\033[8m"
 # define STRIKE		"\033[9m"
 
-
-class	Brain
+class	WrongAnimal
 {
+
 	private:
 
-		std::string	_ideas[100];
+		std::string		_type;
 
 	public:
 
 		/*	Canonical Form	*/
-		Brain( void );
-		Brain( std::string idea );
-		Brain( const Brain &src_object );
-		~Brain( void );
-
-		Brain		&operator=( const Brain &src_object );
-
-		/*	Setter	*/
-		void		setIdea( const std::string idea, int index );
+		WrongAnimal( void );
+		WrongAnimal( std::string type );
+		WrongAnimal( const WrongAnimal &src_object );
+		~WrongAnimal( void );
+		
+		WrongAnimal		&operator=( const WrongAnimal &src_object );
 
 		/*	Getter	*/
-		std::string	getIdea( int index ) const;
+		std::string		getType( void ) const;
+
+		/*	Methode	*/
+		void			makeSound( void ) const;
 
 };
 

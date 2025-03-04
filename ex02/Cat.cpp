@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:25:15 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:26:35 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
  */
 Cat::Cat( void ) : AAnimal("Cat")
 {
-	std::cout << "Default constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Default constructor Cat called."
+				<< RESET << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -31,7 +33,9 @@ Cat::Cat( void ) : AAnimal("Cat")
  */
 Cat::Cat( const std::string type ) : AAnimal(type)
 {
-	std::cout << "Constructor Cat with parameter type called." << std::endl;
+	std::cout	<< CYAN
+				<< "Constructor Cat with parameter type called."
+				<< RESET << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -41,7 +45,9 @@ Cat::Cat( const std::string type ) : AAnimal(type)
  */
 Cat::Cat( const Cat &src_object ) : AAnimal(src_object)
 {
-	std::cout << "Copy constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Copy constructor Cat called."
+				<< RESET << std::endl;
 	_brain = new Brain(*src_object._brain);
 	return ;
 }
@@ -51,7 +57,9 @@ Cat::Cat( const Cat &src_object ) : AAnimal(src_object)
  */
 Cat::~Cat( void )
 {
-	std::cout << "Destructor of class Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Destructor of class Cat called."
+				<< RESET << std::endl;
 	delete _brain;
 	return ;
 }
@@ -59,9 +67,11 @@ Cat::~Cat( void )
 /*
  *	Assignation operator overload
  */
-Cat			&Cat::operator=( const Cat &src_object )
+Cat		&Cat::operator=( const Cat &src_object )
 {
-	std::cout << "Assignation operator overload Cat called" << std::endl;
+	std::cout	<< CYAN
+				<< "Assignation operator overload Cat called."
+				<< RESET << std::endl;
 	if (this != &src_object)
 	{
 		AAnimal::operator=(src_object);
@@ -76,7 +86,7 @@ Cat			&Cat::operator=( const Cat &src_object )
  ******************************************************************************/
 
 /*
- *	Methode setIdea of class Cat
+ *	Method setIdea of class Cat
  */
 void		Cat::setIdea( std::string idea, int index )
 {
@@ -89,7 +99,7 @@ void		Cat::setIdea( std::string idea, int index )
  ******************************************************************************/
 
 /*
- *	Methode getIdea of class Cat
+ *	Method getIdea of class Cat
  */
 std::string	Cat::getIdea( int index ) const
 {
@@ -101,10 +111,12 @@ std::string	Cat::getIdea( int index ) const
  ******************************************************************************/
 
 /*
- *	Methode makeSound of class Cat
+ *	Method makeSound of class Cat
  */
-void		Cat::makeSound( void ) const
+void	Cat::makeSound( void ) const
 {
-	std::cout << "Meow! Meow!" << std::endl;
+	std::cout	<< CYAN
+				<< "Meow! Meow!"
+				<< RESET << std::endl;
 	return ;
 }

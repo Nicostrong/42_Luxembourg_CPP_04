@@ -1,61 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   WrongCat.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 09:11:03 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/03/04 11:23:55 by nfordoxc         ###   Luxembourg.lu     */
+/*   Created: 2025/02/17 09:38:49 by nfordoxc          #+#    #+#             */
+/*   Updated: 2025/02/20 09:16:29 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AAnimal.hpp"
+#include "WrongCat.hpp"
 
 /*******************************************************************************
  *							CANONICAL FORM									   *
  ******************************************************************************/
 
 /*
- *	Default constructor of class AAnimal
+ *	Default Constructor of class WrongCat
  */
-AAnimal::AAnimal( void ) : _type("AAnimal")
+WrongCat::WrongCat( void ) :	WrongAnimal("WrongCat")
 {
-	std::cout	<< GREEN
-				<< "Default constructor AAnimal called."
+	std::cout	<< MAGENTA
+				<< "Default constructor WrongCat called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Constructor of class AAnimal with type parameter
+ *	Constructor of class WrongCat with type parameter
  */
-AAnimal::AAnimal( const std::string type ) : _type(type)
+WrongCat::WrongCat( const std::string type ) :	WrongAnimal(type)
 {
-	std::cout	<< GREEN
-				<< "Constructor AAnimal with parameter type called."
+	std::cout	<< MAGENTA
+				<< "Constructor WrongCat with parameter type called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class AAnimal, copy the value of src to the current object
+ *	Copy constructor of class WrongCat
  */
-AAnimal::AAnimal( const AAnimal &src_object ) : _type(src_object._type)
+WrongCat::WrongCat( const WrongCat &src_object ) :	WrongAnimal(src_object)
 {
-	std::cout	<< GREEN
-				<< "Copy constructor AAnimal called."
+	std::cout	<< MAGENTA
+				<< "Copy constructor WrongCat called."
 				<< RESET << std::endl;
 	return ;
 }
 
 /*
- *	Destructor of class AAnimal
+ *	Destructor of class WrongCat
  */
-AAnimal::~AAnimal( void )
+WrongCat::~WrongCat( void )
 {
-	std::cout	<< GREEN
-				<< "Destructor of class AAnimal called."
+	std::cout	<< MAGENTA
+				<< "Destructor of class WrongCat called."
 				<< RESET << std::endl;
 	return ;
 }
@@ -63,24 +63,27 @@ AAnimal::~AAnimal( void )
 /*
  *	Assignation operator overload
  */
-AAnimal		&AAnimal::operator=( const AAnimal &src_object )
+WrongCat		&WrongCat::operator=( const WrongCat &src_object )
 {
-	std::cout	<< GREEN
-				<< "Copy assignation operator of class AAnimal called."
+	std::cout	<< MAGENTA
+				<< "Assignation operator overload WrongCat called."
 				<< RESET << std::endl;
 	if (this != &src_object)
-		this->_type = src_object._type;
+		this->WrongAnimal::operator=(src_object);
 	return (*this);
 }
 
 /*******************************************************************************
- *								GETTER										   *
+ *								METHOD										   *
  ******************************************************************************/
 
 /*
- *	Getter for the type attribute
+ *	Method to make sound of WrongCat
  */
-std::string	AAnimal::getType( void ) const
+void		WrongCat::makeSound( void ) const
 {
-	return (this->_type);
+	std::cout	<< MAGENTA
+				<< "Meow-Wrong!"
+				<< RESET << std::endl;
+	return ;
 }

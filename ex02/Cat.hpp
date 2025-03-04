@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:55 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:25:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:25:19 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class	Cat : public virtual AAnimal
+class	Cat:	public	AAnimal
 {
 	private:
 
@@ -37,8 +37,8 @@ class	Cat : public virtual AAnimal
 
 		/*	Getter	*/
 		std::string	getIdea( int index ) const;
-		
-		/*	Methodes	*/
+
+		/*	Method	*/
 		void		makeSound( void ) const;
 
 };

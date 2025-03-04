@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WongAnimal.hpp                                     :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 09:38:09 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:29:16 by nfordoxc         ###   Luxembourg.lu     */
+/*   Created: 2025/02/17 09:38:28 by nfordoxc          #+#    #+#             */
+/*   Updated: 2025/03/04 09:46:46 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WONGANIMAL_HPP
-# define WONGANIMAL_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "AAnimal.hpp"
+# include "WrongAnimal.hpp"
 
-class	WongAnimal : public virtual AAnimal
+class	WrongCat:	public WrongAnimal
 {
 	public:
 
 		/*	Canonical Form	*/
-		WongAnimal( void );
-		WongAnimal( std::string type );
-		WongAnimal( const WongAnimal &src_object );
-		virtual ~WongAnimal( void );
-
-		virtual WongAnimal	&operator=( const WongAnimal &src_object );
+		WrongCat( void );
+		WrongCat( std::string type );
+		WrongCat( const WrongCat &src_object );
+		~WrongCat( void );
+		
+		WrongCat	&operator=( const WrongCat &src_object );
 
 		/*	Method	*/
-		void				makeSound( void ) const;
-
+		void			makeSound( void ) const;
+	
 };
 
 #endif
