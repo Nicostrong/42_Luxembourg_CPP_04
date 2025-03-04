@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:11:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:09:44 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:16:59 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
  */
 Cat::Cat( void ) : Animal("Cat")
 {
-	std::cout << "Default constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Default constructor Cat called."
+				<< RESET << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -31,7 +33,9 @@ Cat::Cat( void ) : Animal("Cat")
  */
 Cat::Cat( const std::string type ) : Animal(type)
 {
-	std::cout << "Constructor Cat with parameter type called." << std::endl;
+	std::cout	<< CYAN
+				<< "Constructor Cat with parameter type called."
+				<< RESET << std::endl;
 	_brain = new Brain();
 	return ;
 }
@@ -41,7 +45,9 @@ Cat::Cat( const std::string type ) : Animal(type)
  */
 Cat::Cat( const Cat &src_object ) : Animal(src_object)
 {
-	std::cout << "Copy constructor Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Copy constructor Cat called."
+				<< RESET << std::endl;
 	_brain = new Brain(*src_object._brain);
 	return ;
 }
@@ -51,7 +57,9 @@ Cat::Cat( const Cat &src_object ) : Animal(src_object)
  */
 Cat::~Cat( void )
 {
-	std::cout << "Destructor of class Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Destructor of class Cat called."
+				<< RESET << std::endl;
 	delete _brain;
 	return ;
 }
@@ -59,9 +67,11 @@ Cat::~Cat( void )
 /*
  *	Assignation operator overload
  */
-Cat			&Cat::operator=( const Cat &src_object )
+Cat		&Cat::operator=( const Cat &src_object )
 {
-	std::cout << "Assignation operator overload Cat called." << std::endl;
+	std::cout	<< CYAN
+				<< "Assignation operator overload Cat called."
+				<< RESET << std::endl;
 	if (this != &src_object)
 	{
 		Animal::operator=(src_object);
@@ -103,8 +113,10 @@ std::string	Cat::getIdea( int index ) const
 /*
  *	Method makeSound of class Cat
  */
-void		Cat::makeSound( void ) const
+void	Cat::makeSound( void ) const
 {
-	std::cout << "Meow! Meow!" << std::endl;
+	std::cout	<< CYAN
+				<< "Meow! Meow!"
+				<< RESET << std::endl;
 	return ;
 }

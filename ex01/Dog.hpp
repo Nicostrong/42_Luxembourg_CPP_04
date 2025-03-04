@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:47 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:18:56 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:07:20 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class	Dog : public Animal
+class	Dog:	public Animal
 {
 	private:
 

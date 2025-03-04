@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:10:55 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:08:38 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:05:16 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class	Cat : public virtual Animal
+class	Cat:	public	Animal
 {
 	private:
 

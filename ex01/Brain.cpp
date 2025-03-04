@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:55:17 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:10:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 11:11:10 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
  */
 Brain::Brain( void )
 {
-	std::cout << "Default constructor Brain called." << std::endl;
+	std::cout	<< YELLOW
+				<< "Default constructor Brain called."
+				<< RESET << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = "No idea";
 	return ;
@@ -32,7 +34,9 @@ Brain::Brain( void )
  */
 Brain::Brain( std::string idea )
 {
-	std::cout << "Constructor Brain with parameter idea called." << std::endl;
+	std::cout	<< YELLOW
+				<< "Constructor Brain with parameter idea called."
+				<< RESET << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = idea;
 	return ;
@@ -43,7 +47,9 @@ Brain::Brain( std::string idea )
  */
 Brain::Brain( const Brain &src_object )
 {
-	std::cout << "Copy constructor Brain called." << std::endl;
+	std::cout	<< YELLOW
+				<< "Copy constructor Brain called."
+				<< RESET << std::endl;
 	*this = src_object;
 	return ;
 }
@@ -53,7 +59,9 @@ Brain::Brain( const Brain &src_object )
  */
 Brain::~Brain( void )
 {
-	std::cout << "Destructor of class Brain called." << std::endl;
+	std::cout	<< YELLOW
+				<< "Destructor of class Brain called."
+				<< RESET << std::endl;
 	return ;
 }
 
@@ -62,7 +70,9 @@ Brain::~Brain( void )
  */
 Brain		&Brain::operator=( const Brain &src_object )
 {
-	std::cout << "Assignation operator overload Brain called." << std::endl;
+	std::cout	<< YELLOW
+				<< "Assignation operator overload Brain called."
+				<< RESET << std::endl;
 	if (this != &src_object)
 	{
 		for (int i = 0; i < 100; i++)
@@ -84,9 +94,9 @@ void		Brain::setIdea( const std::string idea, int index )
 		this->_ideas[index] = idea;
 	else
 	{
-		std::cout	<< "Index out of range : "
-					<< index
-					<< std::endl;
+		std::cout	<< YELLOW
+					<< "Index out of range : " << index
+					<< RESET << std::endl;
 	}
 	return ;
 
@@ -105,9 +115,9 @@ std::string	Brain::getIdea( int index ) const
 		return (this->_ideas[index]);
 	else
 	{
-		std::cout	<< "Index out of range : "
-					<< index
-					<< std::endl;
+		std::cout	<< YELLOW
+					<< "Index out of range : " << index
+					<< RESET << std::endl;
 		return ("");
 	}
 }

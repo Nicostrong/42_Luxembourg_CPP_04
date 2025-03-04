@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WongCat.hpp                                        :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 09:38:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 09:20:09 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/03/04 09:46:46 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WONGCAT_HPP
-# define WONGCAT_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Cat.hpp"
-# include "WongAnimal.hpp"
+# include "WrongAnimal.hpp"
 
-class	WongCat:	public Cat, public WongAnimal
+class	WrongCat:	public WrongAnimal
 {
 	public:
 
 		/*	Canonical Form	*/
-		WongCat( void );
-		WongCat( std::string type );
-		WongCat( const WongCat &src_object );
-		virtual ~WongCat( void );
-
-		virtual WongCat	&operator=( const WongCat &src_object );
+		WrongCat( void );
+		WrongCat( std::string type );
+		WrongCat( const WrongCat &src_object );
+		~WrongCat( void );
+		
+		WrongCat	&operator=( const WrongCat &src_object );
 
 		/*	Method	*/
 		void			makeSound( void ) const;
